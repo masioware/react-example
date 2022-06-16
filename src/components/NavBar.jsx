@@ -40,7 +40,7 @@ const menuItems = [
     pageURL: "/project3",
     icon: <Looks3Icon />,
   },
-];
+]
 
 const NavBar = () => {
   const [drawer, setDrawer] = useState(false);
