@@ -1,3 +1,5 @@
+import { StrictMode } from 'react'
+
 import ReactDOM from 'react-dom/client'
 
 // setup app theme
@@ -8,8 +10,10 @@ import DarkTheme from './styles/Theme'
 import Routing from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeProvider theme={DarkTheme}>
-    <CssBaseline />
-    <Routing />
-  </ThemeProvider>
+  <StrictMode>
+    <ThemeProvider theme={DarkTheme}>
+      <CssBaseline />
+      <Routing />
+    </ThemeProvider>
+  </StrictMode>
 )
