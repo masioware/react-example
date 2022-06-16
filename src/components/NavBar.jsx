@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
-import LooksOneIcon from "@mui/icons-material/LooksOne";
-import LooksTwoIcon from "@mui/icons-material/LooksTwo";
-import Looks3Icon from "@mui/icons-material/Looks3";
+import MenuIcon from '@mui/icons-material/Menu'
+import HomeIcon from '@mui/icons-material/Home'
+import LooksOneIcon from '@mui/icons-material/LooksOne'
+import LooksTwoIcon from '@mui/icons-material/LooksTwo'
+import Looks3Icon from '@mui/icons-material/Looks3'
 import {
   AppBar,
   Toolbar,
@@ -16,43 +16,43 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Drawer,
-} from "@mui/material";
+  Drawer
+} from '@mui/material'
 
 const menuItems = [
   {
-    menuTitle: "Main",
-    pageURL: "/",
-    icon: <HomeIcon />,
+    menuTitle: 'Main',
+    pageURL: '/',
+    icon: <HomeIcon />
   },
   {
-    menuTitle: "Project 1",
-    pageURL: "/project1",
-    icon: <LooksOneIcon />,
+    menuTitle: 'Project 1',
+    pageURL: '/project1',
+    icon: <LooksOneIcon />
   },
   {
-    menuTitle: "Project 2",
-    pageURL: "/project2",
-    icon: <LooksTwoIcon />,
+    menuTitle: 'Project 2',
+    pageURL: '/project2',
+    icon: <LooksTwoIcon />
   },
   {
-    menuTitle: "Project 3",
-    pageURL: "/project3",
-    icon: <Looks3Icon />,
-  },
+    menuTitle: 'Project 3',
+    pageURL: '/project3',
+    icon: <Looks3Icon />
+  }
 ]
 
 const NavBar = () => {
-  const [drawer, setDrawer] = useState(false);
-  const navigate = useNavigate();
+  const [drawer, setDrawer] = useState(false)
+  const navigate = useNavigate()
 
   const toggleDrawer = (open) => () => {
-    setDrawer(open);
-  };
+    setDrawer(open)
+  }
 
   const handleMenuClick = (pageURL) => {
-    navigate(pageURL);
-  };
+    navigate(pageURL)
+  }
 
   return (
     <>
@@ -93,7 +93,7 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
     </>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
